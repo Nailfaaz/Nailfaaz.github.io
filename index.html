@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nailfaaz · AI Engineer / Data Scientist</title>
+  <meta name="description" content="Portfolio of Nailfaaz (ナイルファーズ): AI engineer and data scientist. Computer vision, forecasting, LLM and RAG systems.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top">Nailfaaz</a>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#awards">Awards</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- ======================================================= hero -->
+    <section class="hero">
+      <img class="hero-photo" src="img/photo.jpg" alt="Portrait of Nailfaaz" width="300" height="400">
+      <div class="hero-text">
+        <p class="kana">ナイルファーズ</p>
+        <h1>Nailfaaz</h1>
+        <p class="role">AI Engineer / Data Scientist</p>
+        <p class="lead">
+          I build AI that people actually use: computer vision, forecasting, and LLM / RAG systems.
+          Currently an AI engineer intern at Kalbe Farma. Computer Science, Universitas Gadjah Mada
+          (GPA 3.87 / 4.0, cum laude).
+        </p>
+        <ul class="facts">
+          <li><strong>3</strong> papers</li>
+          <li><strong>3×</strong> 1st place, national data science competitions</li>
+          <li><strong>8</strong> projects below</li>
+        </ul>
+        <div class="buttons">
+          <a class="btn primary" href="Nailfaaz_Portfolio.pdf">Portfolio PDF</a>
+          <a class="btn" href="https://github.com/Nailfaaz">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/nailfaaz-950913264/">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================= projects -->
+    <section id="projects">
+      <h2>Projects <span>プロジェクト</span></h2>
+      <div class="grid">
+
+        <article class="card">
+          <img src="img/satellite.jpg" alt="Satellite image next to its land-cover mask" loading="lazy">
+          <div class="card-body">
+            <p class="no">01</p>
+            <h3>Satellite Land-Cover Segmentation</h3>
+            <p>Stratified splitting for imbalanced classes on DeepGlobe (7 classes). DeepLabV3+ with
+              test-time augmentation reached 83.9% pixel accuracy.</p>
+            <p class="tags">PyTorch · DeepLabV3+ · U-Net</p>
+            <a class="more" href="https://www.kaggle.com/code/nail2004/land-cover-segmentation">Kaggle notebook →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="img/claims.jpg" alt="Monthly total claim history and forecast chart" loading="lazy">
+          <div class="card-body">
+            <p class="no">02</p>
+            <h3>Health-Insurance Claim Forecasting</h3>
+            <p>Frequency × severity decomposition on 19 months of data, forecast to the end of 2026.
+              <strong>1st place</strong>, MCF ITB 2026 Data Science Competition.</p>
+            <p class="tags">Time series · NumPy · pandas</p>
+            <a class="more" href="https://github.com/Nailfaaz/insurance-claim-forecasting">GitHub →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="img/thesis.jpg" alt="Chest X-rays showing CRF-as-RNN corrections" loading="lazy">
+          <div class="card-body">
+            <p class="no">03</p>
+            <h3>Multi-Organ Chest X-Ray Segmentation (thesis)</h3>
+            <p>Lungs and heart segmentation: U-Net vs DeepLabV3+ across MobileNetV3 encoders, then
+              CRF-as-RNN refinement. Paper accepted at ICTIS 2026 (Springer).</p>
+            <p class="tags">PyTorch · segmentation_models_pytorch</p>
+            <a class="more" href="https://github.com/Nailfaaz/skripsi">GitHub →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="img/waze.jpg" alt="Forecast versus actual hourly road speed" loading="lazy">
+          <div class="card-body">
+            <p class="no">04</p>
+            <h3>Traffic Speed Forecasting (Waze)</h3>
+            <p>Hourly speeds for 934 London road segments, one model per road. Random Forest was best
+              of five models (sMAPE 8.18).</p>
+            <p class="tags">scikit-learn · XGBoost · Keras</p>
+            <a class="more" href="https://github.com/Nailfaaz/Future-Traffic-Speeds-Predictive-Analytics-with-Waze-Data-in-the-UK">GitHub →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="img/rag.jpg" alt="Per-patient knowledge graph" loading="lazy">
+          <div class="card-body">
+            <p class="no">05</p>
+            <h3>Production RAG Chatbot Infrastructure</h3>
+            <p>Document ingestion, persistent conversational memory and LLM tracing at Kalbe Farma.
+              Ingestion ~1.5 min → ~8 s per report; ~4× faster memory writes.</p>
+            <p class="tags">FastAPI · Qdrant · ArangoDB · Langfuse · Azure AKS</p>
+            <span class="more muted">Internal project (no public code)</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="img/ezscrape.jpg" alt="Ez-Scrape link scraper with pagination strategies" loading="lazy">
+          <div class="card-body">
+            <p class="no">06</p>
+            <h3>Ez-Scrape: LLM Training Data Collection</h3>
+            <p>Streamlit app for scraping links, web pages and PDFs across four pagination styles,
+              built for the Sahabat-AI data effort at GoTo Financial (600K+ files collected).</p>
+            <p class="tags">Selenium · Streamlit · warcio · PyMuPDF</p>
+            <a class="more" href="https://github.com/Nailfaaz/ez-scrape">GitHub →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="img/parking.jpg" alt="Vehicles detected inside parking zones on CCTV" loading="lazy">
+          <div class="card-body">
+            <p class="no">07</p>
+            <h3>Illegal Parking Detection</h3>
+            <p>YOLOv8 + ByteTrack on street CCTV with a 30-second dwell rule; YOLOv8n runs at ~20 FPS.
+              <strong>1st place</strong>, RISTEK Datathon 2023.</p>
+            <p class="tags">YOLOv8 · OpenCV · ByteTrack</p>
+            <a class="more" href="https://github.com/Nailfaaz/illegal-parking-detection">GitHub →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="img/face.jpg" alt="Admin dashboard listing enrolled users" loading="lazy">
+          <div class="card-body">
+            <p class="no">08</p>
+            <h3>Face Authentication &amp; Access Control</h3>
+            <p>Webcam recognition with InsightFace (ArcFace embeddings), an admin dashboard and
+              recognition logs with CSV export.</p>
+            <p class="tags">Flask · InsightFace · SQLite</p>
+            <a class="more" href="https://github.com/Nailfaaz/face-track">GitHub →</a>
+          </div>
+        </article>
+
+      </div>
+      <p class="also">More on GitHub:
+        <a href="https://github.com/Nailfaaz/datachat">datachat</a> ·
+        <a href="https://github.com/Nailfaaz/Pose-Estimation-with-YOLOv8-pose-and-Kalman-Filter-for-Tracking-Falls">fall detection</a> ·
+        <a href="https://github.com/Nailfaaz/telecom-customer-churn">telecom churn</a> ·
+        <a href="https://github.com/Nailfaaz/nihongo">NihonGo (Japanese flashcards)</a>
+      </p>
+    </section>
+
+    <!-- ======================================================= experience -->
+    <section id="experience">
+      <h2>Experience <span>職歴</span></h2>
+      <ol class="timeline">
+        <li>
+          <p class="when">2026.02 – now</p>
+          <div>
+            <h3>AI Engineer Intern · Kalbe Farma (Corporate Digital Technology)</h3>
+            <p>Retrieval, memory, observability and Kubernetes deployment for production RAG chatbots.</p>
+          </div>
+        </li>
+        <li>
+          <p class="when">2026.01 – now</p>
+          <div>
+            <h3>AI Olympiad Mentor · hAIppy.id</h3>
+            <p>Mentoring students for AI olympiad competitions.</p>
+          </div>
+        </li>
+        <li>
+          <p class="when">2024.09 – 2025.03</p>
+          <div>
+            <h3>Data Scientist Intern · GoTo Financial</h3>
+            <p>Large-scale data collection for the Sahabat-AI LLM: 600K+ PDF/WARC files (5B+ tokens) with the team.</p>
+          </div>
+        </li>
+        <li>
+          <p class="when">2024.01 – 2025.07</p>
+          <div>
+            <h3>Teaching Assistant · Universitas Gadjah Mada</h3>
+            <p>Three undergraduate courses over four semesters.</p>
+          </div>
+        </li>
+      </ol>
+      <div class="edu">
+        <h3>Education <span>学歴</span></h3>
+        <p><strong>Universitas Gadjah Mada</strong>, Computer Science, 2022.08 – 2026.03 ·
+          GPA 3.87 / 4.0 (cum laude) · TELADAN full scholarship, Tanoto Foundation</p>
+      </div>
+    </section>
+
+    <!-- ======================================================= awards & papers -->
+    <section id="awards" class="two">
+      <div>
+        <h2>Awards <span>受賞歴</span></h2>
+        <ul class="list">
+          <li><strong>1st</strong> Data Science Competition, MCF ITB · 2026</li>
+          <li><strong>1st</strong> Data Science, ISFEST UMN · 2024</li>
+          <li><strong>Finalist</strong> GEMASTIK XVII Data Mining · 2024</li>
+          <li><strong>2nd</strong> UNITY#12 Data Mining, UNY · 2024</li>
+          <li><strong>1st</strong> Datathon 2023, RISTEK UI (+ best paper, best presentation) · 2023</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Publications <span>論文</span></h2>
+        <ul class="list">
+          <li>Systematic Evaluation of CRF-as-RNN for Multi-Organ Chest X-Ray Segmentation · ICTIS 2026, Springer LNNS (accepted)</li>
+          <li><a href="https://doi.org/10.4028/p-1KHxPX">SmartSpectorAI: Roadside Parking Warning System</a> · ICST 2024, Engineering Headway</li>
+          <li><a href="https://ieeexplore.ieee.org/abstract/document/10381938">U-Net Based Vegetation Segmentation for Urban Green Space</a> · ICIC 2023, IEEE</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ======================================================= skills -->
+    <section id="skills">
+      <h2>Skills <span>技能</span></h2>
+      <dl class="skills">
+        <dt>AI / ML</dt><dd>PyTorch, scikit-learn, Hugging Face, OpenCV, YOLO, XGBoost</dd>
+        <dt>LLM</dt><dd>LangChain, RAG, Qdrant, ArangoDB, Neo4j, Langfuse, Arize Phoenix</dd>
+        <dt>Data</dt><dd>SQL, pandas, NumPy, BigQuery, Looker Studio, Streamlit</dd>
+        <dt>Infra</dt><dd>Docker, Kubernetes, Azure, FastAPI, Flask, Git</dd>
+        <dt>Languages</dt><dd>Indonesian (native), English</dd>
+      </dl>
+    </section>
+
+    <!-- ======================================================= contact -->
+    <section id="contact" class="contact">
+      <h2>Contact <span>連絡先</span></h2>
+      <p>Open to AI / data roles in Japan. 日本でのAI・データ分野のお仕事を探しています。</p>
+      <div class="buttons">
+        <a class="btn primary" href="mailto:nailfaaz.work@gmail.com">nailfaaz.work@gmail.com</a>
+        <a class="btn" href="https://www.linkedin.com/in/nailfaaz-950913264/">LinkedIn</a>
+        <a class="btn" href="https://github.com/Nailfaaz">GitHub</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 Nailfaaz · Jakarta, Indonesia</footer>
+</body>
+</html>
